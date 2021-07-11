@@ -27,15 +27,14 @@ before use in any non-testing environment.
 Dependencies
 ============
 
-  URI: <first dependency>
-  branch: <branch name>
+  URI: https://github.com/agherzan/meta-raspberrypi.git
+  branch: hardknott
 
-  URI: <second dependency>
-  branch: <branch name>
+  URI: https://github.com/openembedded/meta-openembedded.git 
+  branch: hardknott
 
-  .
-  .
-  .
+  URI: git://git.yoctoproject.org/poky
+  branch: hardknott
 
 Patches
 =======
@@ -48,8 +47,9 @@ Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
 Table of Contents
 =================
 
-  I. Adding the meta-dule layer to your build
- II. Misc
+   I. Adding the meta-dule layer to your build
+  II. Misc
+ III. Building the image
 
 
 I. Adding the meta-dule layer to your build
@@ -60,4 +60,12 @@ Run 'bitbake-layers add-layer meta-dule'
 II. Misc
 ========
 
---- replace with specific information about the meta-dule layer ---
+Enter your user and root passwords in recipes-core/images/core-image-base.bbappend
+
+III. Building the image
+=======================
+
+Source your environment and build an image witch
+
+bitbake core-image-base
+
