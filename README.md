@@ -36,6 +36,9 @@ Dependencies
   URI: git://git.yoctoproject.org/poky
   branch: hardknott
 
+  URI: https://github.com/meta-qt5/meta-qt5.git
+  branch: hardknott
+
 Patches
 =======
 

@@ -8,6 +8,8 @@ inherit core-image
 inherit extrausers
 inherit populate_sdk_qt5
 
+IMAGE_FEATURES_remove = "debug-tweaks"
+
 ROOT_PASSWORD = "metatest"
 PASSWORD = "test"
 USER = "dule"
@@ -20,5 +22,6 @@ EXTRA_USERS_PARAMS = "\
     "
 
 CORE_IMAGE_EXTRA_INSTALL += "\
+	dule-packagegroup-general \
 	dule-packagegroup-qt5 \
 	"
