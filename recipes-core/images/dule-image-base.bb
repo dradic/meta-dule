@@ -2,7 +2,7 @@ SUMMARY = "Qt Image for Raspberry Pi 4"
 
 LICENSE = "MIT"
 
-IMAGE_INSTALL_append = " sudo"
+IMAGE_INSTALL_append = " sudo openssh-sftp-server"
 
 inherit core-image
 inherit extrausers
