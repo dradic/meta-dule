@@ -14,4 +14,5 @@ RDEPENDS_${PN} = " \
 	qtserialbus \
 	qtserialport \
 	qtvirtualkeyboard \
+        qtwayland \
 "
