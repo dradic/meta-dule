@@ -15,13 +15,14 @@ PASSWORD = "test"
 USER = "dule"
 
 EXTRA_USERS_PARAMS = "\    
-    groupadd -r netdev; \
     usermod -P ${ROOT_PASSWORD} root; \ 
     useradd -r -m -P ${PASSWORD} -s /bin/sh -d /home/dule ${USER}; \       
-    usermod -a -G sudo,netdev ${USER}; \
+    usermod -a -G sudo ${USER}; \
     "
 
+PACKAGE_CONFIG_pn-qtbase_append = "eglfs gles2 glib"
+
 CORE_IMAGE_EXTRA_INSTALL += "\
-	dule-packagegroup-general \
-	dule-packagegroup-qt5 \
-	"
+    dule-packagegroup-general \
+    dule-packagegroup-qt5 \
+    "
